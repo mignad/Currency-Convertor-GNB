@@ -1,1 +1,1 @@
-# Currency-Convertor-GNB
+# Currency conversions application
