@@ -18,14 +18,14 @@ class ViewController: UIViewController {
                 do {
                 
              //Array
-               let myJson = try JSONSerialization.jsonObject(with:content, options: JSONSerialization.ReadingOptions.mutableContainers) as AnyObject
-                    //print(myJson)
-                    if let rate  = myJson["rate"] as? NSDictionary {
-                     
-                        if let currency = rate["USD"] {
-                            print(currency)
-                        }
-                    }
+             let myJson = try JSONSerialization.jsonObject(with:content, options: JSONSerialization.ReadingOptions.mutableContainers) as? [[String: AnyObject]] else { return }
+for rate in myJson
+    guard let cur = user["from"] as? String,
+        let curRate = user["rate"] as? Double else { break }
+ 
+        if let cur = "AUD" {
+            print(curRate)
+        }>>
              }
                 catch {
                     
