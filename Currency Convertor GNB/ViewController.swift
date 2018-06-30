@@ -43,7 +43,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     //Button
     @IBAction func action(_ sender: Any) {
         
-        if (input.text != "http://gnb.dev.airtouchmedia.com/rates.json") {
+        if (input.text != "") {
             outputLabel.text = String(Double(input.text!)! * activeCurrency)
         }
         
